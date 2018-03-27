@@ -6,6 +6,6 @@ from rest_framework.parsers import JSONParser
 # Create your views here.
 @csrf_exempt
 def hello(request):
-    resp = {'Status': 200, 'Message': 'Hello AirCraft Control Apis.'}
+    resp = {'Status': 200, 'Message': 'Hello AirCraft Control Apis v2.0'}
     return JsonResponse(resp, safe=False)
 
