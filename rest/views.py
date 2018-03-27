@@ -1,11 +1,10 @@
-from django.http import HttpResponse,JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 # Create your views here.
-@csrf_exempt
+@api_view(['GET', 'POST'])
 def hello(request):
     resp = {'Status': 200, 'Message': 'Hello AirCraft Control Apis v2.0'}
-    return JsonResponse(resp, safe=False)
+    return Response(resp)
 
