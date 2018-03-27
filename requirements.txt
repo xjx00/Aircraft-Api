@@ -3,3 +3,4 @@ djangorestframework
 gunicorn
 markdown
 django-filter
+django-crispy-forms
